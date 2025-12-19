@@ -1,0 +1,10 @@
+[project]
+name = "scanner-dark"
+version = "0.1.0"
+description = "Scanner de rede e portas — empacotado a partir de scanner_dark.py"
+authors = [ { name = "Seu Nome", email = "you@example.com" } ]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.pyinstaller]
+# PyInstaller settings can be added here if desired.
