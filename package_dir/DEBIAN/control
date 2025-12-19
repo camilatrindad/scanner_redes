@@ -1,0 +1,7 @@
+Package: scanner-dark
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Seu Nome <you@example.com>
+Description: Scanner dark - empacotado a partir de scanner_dark.py
