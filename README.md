@@ -1,62 +1,145 @@
-Scanner Dark — Empacotamento
-=================================
+# ScannerDark 🔍🌐
 
-Instruções rápidas para gerar executáveis e pacote .deb do projeto.
+**ScannerDark** is a Python-based network and port scanner with a graphical interface built using **Tkinter**.  
+It allows users to scan local networks, detect active hosts, check common open ports, and generate PDF reports.
 
-Requisitos
-- Python 3.8+
-- Em Linux: `dpkg-deb` para criar o .deb
-- Em Windows: recomenda-se rodar o `build_exe.sh` diretamente no Windows (ou numa VM)
+This project was developed for educational purposes, focusing on **computer networks**, **Python programming**, and **GUI development**.
 
-Instalar dependências (opcional, recomendado em venv):
+---
 
+## ✨ Features
+
+- 🖧 Network scan to detect active devices
+- 🔓 Port scanning (SSH, HTTP, HTTPS, RDP)
+- 🪟 Graphical interface using Tkinter
+- 📄 PDF report generation
+- ⚡ Multi-threaded scanning for better performance
+- 🌙 Dark-themed interface
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python 3**
+- **Tkinter** (GUI)
+- **Socket**
+- **Threading**
+- **ReportLab** (PDF generation)
+- **Subprocess**
+- **Linux / macOS compatible**
+
+---
+
+## 📂 Project Structure
+
+
+---
+
+## 💻 Installation & Usage
+
+### 🐧 Linux
+
+#### Requirements
+- Python 3.9 or newer
+- pip
+
+#### Steps
 ```bash
-python -m pip install -r requirements.txt
-```
+git clone https://github.com/camilatrindad/scanner-dark.git
+cd scanner-dark
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+python scanner_dark.py
 
-Gerar EXE (Windows)
-
-Recomendado: abra um prompt/Powershell no Windows, ative seu ambiente e rode:
-
-```powershell
-python -m pip install -r requirements.txt
-python -m PyInstaller --onefile --name scanner_dark scanner_dark.py
-# exe ficará em dist\scanner_dark.exe
-```
-
-Ou (no Linux) executar o script de conveniência (pode não gerar um exe nativo válido):
-
-```bash
-./build_exe.sh
-```
-
-Gerar DEB (Linux)
-
-```bash
-chmod +x build_deb.sh
-./build_deb.sh 1.0.0
-# gera scanner-dark_1.0.0_<arch>.deb
-
-```
- MacOS – Run from Source
+---
 
 This application is distributed as source code for macOS.
 
-### Requirements
-- macOS
-- Python 3.9 or newer
-
-### How to Run
-
-1. Install Python from https://www.python.org
-2. Clone this repository:
-   ```bash
-   git clone https://github.com/camilatrindad/scanner-dark.git
-   cd scanner-dark
-
+Requirements
 ```
 
-Observações
-- O `.exe` é normalmente gerado em Windows. Cross-compilar de Linux para Windows requer ferramentas/ambientes adicionais.
-- O script `build_deb.sh` usa PyInstaller para gerar um binário Linux e `dpkg-deb` para empacotar.
-- Personalize o `control` em `build_deb.sh` com seu nome e email.
+### macOS
+
+Python 3.9 or newer (from https://www.python.org
+)
+
+Steps
+git clone https://github.com/camilatrindad/scanner-dark.git
+cd scanner-dark
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+python scanner_dark.py
+
+
+If macOS blocks network access, allow Python in
+System Settings → Privacy & Security.
+
+
+📄 PDF Report
+
+The application can generate a PDF report containing:
+
+Date and time of the scan
+
+List of active devices
+
+Open ports detected
+
+The PDF file is saved in the same directory where the program is executed.
+
+
+⚠️ Notes & Limitations
+
+Some network scans may require administrator privileges.
+
+Port scanning is limited to common ports by default.
+
+Network behavior may vary depending on firewall rules and OS permissions.
+
+The project is intended for educational and ethical use only.
+
+
+🎓 Academic Context
+
+This project was developed as part of the Computer Networks course at
+IFRN – Federal Institute of Rio Grande do Norte.
+
+It demonstrates practical knowledge of:
+
+Network concepts
+
+Socket programming
+
+Multithreading
+
+Cross-platform Python applications
+
+
+📌 Future Improvements
+
+Custom port range scanning
+
+Export results to CSV
+
+Improved macOS compatibility
+
+Executable and installer versions
+
+Network interface selection
+
+
+👩‍💻 Author
+
+Camila Trindade
+Computer Networks Student – IFRN
+
+GitHub: @camilatrindad
+
+📜 License
+
+This project is for educational purposes.
+You are free to study, modify, and improve the code.
