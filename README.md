@@ -36,6 +36,24 @@ Gerar DEB (Linux)
 chmod +x build_deb.sh
 ./build_deb.sh 1.0.0
 # gera scanner-dark_1.0.0_<arch>.deb
+
+```
+ MacOS – Run from Source
+
+This application is distributed as source code for macOS.
+
+### Requirements
+- macOS
+- Python 3.9 or newer
+
+### How to Run
+
+1. Install Python from https://www.python.org
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/camilatrindad/scanner-dark.git
+   cd scanner-dark
+
 ```
 
 Observações
